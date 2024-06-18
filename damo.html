@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find job</title>
+    <link rel="icon" type="image/x-icon" href="./assest/img/Group 7408.png" />
+    <!--boostep-5 link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!--icon cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!--animesn link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!--css link-->
+    <link rel="stylesheet" href="./assest/css/damo.css" />
+</head>
+
+<body>
+    <!--header -->
+    <nav>
+        <div class="navbar">
+            <i class="fa-solid fa-bars btn-menu  fs-30 "></i>
+          
+            <div class="logo-img d-lg-none">
+                <img src="./assest/img/log-in-web.png" alt="" />
+            </div>
+
+            <div class="nav-links d-lg-flex align-items-center justify-content-between">
+                <div class="d-flex justify-content-between">
+                    <div class="logo-img">
+                        <img src="./assest/img/log-in-web.png" alt="" />
+                    </div>
+                    <div class="sidebar-logo">
+                        <i class="fa-solid fa-xmark btn-closed"></i>
+                    </div>
+                </div>
+
+                <!--  <div class="d-flex user-detile-card">
+                    <img src="./assest/img/Ellipse 55.png" alt="" class="heder-img ">
+           <div class="user-detile">
+                    <h6 class="mb-0">rathod uday</h6>
+                    <p class="mb-0">6355618812</p>
+                    </div>
+                </div>  -->
+                <ul class="links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li>
+                        <a href="#">Find Jobs</a>
+                    </li>
+                    <li><a href="#">Companies</a></li>
+                    <li>
+                        <a href="#">Institutes</a>
+                    </li>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex gap-3 align-items-center  d-none">
+                <i class="fa-solid fa-envelope icon-style"></i>
+                <i class="fa-solid fa-bell icon-style"></i>
+
+                <i class="fa-solid fa-sun icon-style" onclick="darkmode()"></i>
+
+
+                <div class="dropdown log-dropdown">
+                    <button class="border-0 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assest/img/Ellipse 55.png" alt="" class="heder-img d-none d-lg-block" />
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="align-middle">Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-brands fa-hire-a-helper"></i>
+                                <span class="align-middle">Help</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-gear"></i>
+                                <span class="align-middle">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <span class="align-middle">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="d-flex gap-1 align-items-center  ">
+                <i class="fa-solid fa-sun icon-style" onclick="darkmode()"></i>
+                <button type="button" class="Log-button d-none d-lg-block" id="Login-btn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                Log In
+                </button>
+                <button type="button" class="Sign-button d-none d-lg-block" id="Signup-btn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                Sign Up
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div id="Signup">
+                            <div class="modal-body ">
+                                <div class="">
+                                    <div class="modal-first-text">
+                                        <h1>Create an account</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Fusce a sagittis pharetra.</p>
+                                    </div>
+
+                                    <div class="login-tab mt-5">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class=" Candidate-btn active" id="Candidate-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#Candidate-profile"
+                                                    type="button" role="tab" aria-controls="pills-home"
+                                                    aria-selected="true">Candidate</button>
+                                            </li>
+                                            <li class="nav-item " role="presentation">
+                                                <button class="Employer-btn" id="Employer-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#Employer-profile" type="button" role="tab"
+                                                    aria-controls="pills-profile"
+                                                    aria-selected="false">Employer</button>
+                                            </li>
+
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="Candidate-profile"
+                                                role="tabpanel" aria-labelledby="Employer-tab" tabindex="0">
+                                                <div class="account-input">
+                                                    <label for="">Full Name*</label><br>
+                                                    <input type="text" placeholder="Enter Full Name">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Email*</label><br>
+                                                    <input type="Email" placeholder="Enter Email address*">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Password*</label><br>
+                                                    <input type="Password" placeholder="***********">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Confirm Password*</label><br>
+                                                    <input type="Password" placeholder="***********">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="Employer-profile" role="tabpanel"
+                                                aria-labelledby="Employer-tab" tabindex="0">
+                                                <div class="account-input">
+                                                    <label for="">Full Name*</label><br>
+                                                    <input type="text" placeholder="Enter Full Name">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Email*</label><br>
+                                                    <input type="Email" placeholder="Enter Email address*">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Password*</label><br>
+                                                    <input type="Password" placeholder="***********">
+                                                </div>
+                                                <div class="account-input">
+                                                    <label for="">Confirm Password*</label><br>
+                                                    <input type="Password" placeholder="***********">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer Register-footer mt-4">
+                                <button type="button" data-bs-dismiss="modal">Register</button>
+                                <p>Already have an account? <span class="garen-bg" id="Already-login">Login</span></p>
+                            </div>
+                        </div>
+
+
+
+                        <div id="Login">
+                            <div class="modal-body ">
+                                <div class="">
+                                    <div class="modal-first-text">
+                                        <h1>Welcome Back</h1>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Fusce a sagittis pharetra.</p>
+                                    </div>
+
+                                    <div class="login-tab mt-5">
+                                        <div class="account-input">
+                                            <label for="">Username or Email address*</label><br>
+                                            <input type="text" placeholder="Enter Full Name">
+                                        </div>
+
+                                        <div class="account-input">
+                                            <label for="">Password*</label><br>
+                                            <input type="Password" placeholder="***********">
+                                        </div>
+
+                                        <div class="d-flex justify-content-between mt-5 Remember-checkbox">
+
+                                            <label for=""><input type="checkbox" class="me-2">Remember Me</label>
+                                            <a href="#" id="forget-pas">Forget Password</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal-footer Register-footer mt-3">
+                                <button type="button" data-bs-dismiss="modal">Login</button>
+                                <p>Don't have an account? <span class="garen-bg" id="account-sing">Signup</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-1 align-items-center d-none">
+                <div class="Log-button" id="Login-btn">
+                    <p>Log In</p>
+                </div>
+                <div class="Sign-button" id="Signup-btn">
+                    <p>Sign Up</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--header end -->
+
+    <main>
+        <section class="mt-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-1 order-lg-0">
+                        <div class="mt-5 mt-lg-0">
+                            <div class="Find-text">
+                                <div data-aos="zoom-in-right">
+                                    <h1 class="text-lg-start text-sm-center"><span class="garen-bg">Find </span> the
+                                        most exciting starup <span class="garen-bg">jobs</span></h1>
+                                </div>
+                                <div data-aos="zoom-out-right">
+                                    <p class="mt-sm-4 mt-3 text-lg-start text-sm-center">Thousands of jobs at here. Find
+                                        your New Job Today! New Job Postings Everyday</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-lg-block d-flex justify-content-center">
+                            <div class="mt-md-5 mt-4 position-relative job-searchbar">
+                                <input type="text" placeholder="Search your job" />
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative ms-lg-5">
+                            <div class="mt-lg-170 mt-130 first-job-img">
+                                <div data-aos="flip-down">
+                                    <img src="./assest/img/Group 7408.png" alt="" class="w-100" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="box-bag">
+                                    <div data-aos="zoom-in">
+                                        <div class="round-bag text-center">
+                                            <div class="bag-datile">
+                                                <i class="fa-solid fa-briefcase"></i>
+                                                <p class="mb-0 mt-lg-1">10.5k</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-bag text-center box-search">
+                                    <div data-aos="fade-down">
+                                        <div class="sech-bag">
+                                            <div class="bag-datile">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-bag text-center box-shoping">
+
+                                    <div class="bag-shoping">
+                                        <div class="bag-datile">
+                                            <i class="fa-solid fa-bag-shopping"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apply-section">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div>
+                            <div class="popular-box-desing">
+                                <div class="position-relative">
+                                    <div class="dort-img">
+                                        <img src="./assest/img/Group.png" alt="" />
+                                    </div>
+                                    <div data-aos="fade-up-right">
+                                        <div class="popular-text">
+                                            <h1>We are <span class="garen-bg">popular</span> Everywhere</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-desing-one">
+                                        <div class="box-desing-two"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="mt-lg-0 mt-4">
+
+                            <div class="card border-0 post-cv-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="card-icone bag-img">
+                                                <img src="./assest/img/Vector (1).png" alt="" />
+                                            </div>
+                                            <div class="ms-3 card-text-look">
+                                                <h6 class="mb-0">I’m looking for a job</h6>
+                                                <p class="mb-0">Post CV and apply job you love</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-icon-two">
+                                            <img src="./assest/img/Vector.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="card border-0 post-cv-card mt-10">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <div class="card-icone">
+                                                <img src="./assest/img/Group 64.png" alt="" />
+                                            </div>
+                                            <div class="ms-3 card-text-look">
+                                                <h6 class="mb-0">I want to post</h6>
+                                                <p class="mb-0">Post jobs & hire professionals</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-icon-two">
+                                            <img src="./assest/img/Vector.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container-fluid">
+                <div>
+                    <div class="position-relative">
+                        <div class="News-title text-sm-center">
+
+                            <h1>Latest <span class="garen-bg">News</span></h1>
+
+                            <p class="mb-0 mt-2">Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula
+                            </p>
+
+                        </div>
+                        <div class="rightsid-img">
+                            <img src="./assest/img/Group (1).png" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="swiper mySwiper Latest-News-card">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card news-card">
+                                    <div class="card-body">
+                                        <div class="card-img">
+                                            <img src="./assest/img/caed-img-1.png" alt="" class="w-100" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="d-flex gap-2">
+                                                <div class="uear-text">
+                                                    <p><i class="fa-solid fa-user me-xl-3 me-2"></i>By Niraj Chawla</p>
+                                                </div>
+                                                <div class="ms-3 uear-text">
+                                                    <p><i class="fa-solid fa-clock me-xl-3 me-2"></i>45 min ago</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 card-text">
+                                                <h1>Job hunt season is on - check out the UK’s Best Places to Work</h1>
+                                            </div>
+                                            <div class="mt-2 card-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non
+                                                    nunc varius.Neque nulla id bibendum non nunc varius</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer mt-3">
+                                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                                <div class="card-text">
+                                                    <h5>Read More</h5>
+                                                </div>
+                                                <div class="card-icon">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card news-card">
+                                    <div class="card-body">
+                                        <div class="card-img">
+                                            <img src="./assest/img/card-3.png" alt="" class="w-100" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="d-flex gap-2">
+                                                <div class="uear-text">
+                                                    <p><i class="fa-solid fa-user me-xl-3 me-2"></i>By Niraj Chawla</p>
+                                                </div>
+                                                <div class="ms-3 uear-text">
+                                                    <p><i class="fa-solid fa-clock me-xl-3 me-2 me-2"></i>45 min ago</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 card-text">
+                                                <h1>Job hunt season is on - check out the UK’s Best Places to Work</h1>
+                                            </div>
+                                            <div class="mt-2 card-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non
+                                                    nunc varius.Neque nulla id bibendum non nunc varius</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer mt-3">
+                                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                                <div class="card-text">
+                                                    <h5>Read More</h5>
+                                                </div>
+                                                <div class="card-icon">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card news-card">
+                                    <div class="card-body">
+                                        <div class="card-img">
+                                            <img src="./assest/img/card-2 (1).png" alt="" class="w-100" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="d-flex gap-2">
+                                                <div class="uear-text">
+                                                    <p><i class="fa-solid fa-user me-xl-3 me-2 me-2"></i>By Niraj Chawla
+                                                    </p>
+                                                </div>
+                                                <div class="ms-3 uear-text">
+                                                    <p><i class="fa-solid fa-clock me-xl-3 me-2 me-2"></i>45 min ago</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 card-text">
+                                                <h1>Job hunt season is on - check out the UK’s Best Places to Work</h1>
+                                            </div>
+                                            <div class="mt-2 card-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non
+                                                    nunc varius.Neque nulla id bibendum non nunc varius</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer mt-3">
+                                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                                <div class="card-text">
+                                                    <h5>Read More</h5>
+                                                </div>
+                                                <div class="card-icon">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="row">
+                    <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-img">
+                                <img src="./assest/img/caed-img-1.png" alt="" class="w-100">
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex">
+                                    <div>
+                                        <p><i class="fa-solid fa-user me-2"></i>By Niraj Chawla</p>
+                                    </div>
+                                    <div class="ms-3">
+                                        <p><i class="fa-solid fa-clock me-2"></i>45 min ago</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h1>Job hunt season is on - check out the UK’s Best Places to Work</h1>
+                                </div>
+                                <div class="mt-3">
+                                    <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.Neque nulla id bibendum non nunc varius </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <div>
+                                    <h5>Read More</h5>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>-->
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="">
+                            <div class="Dream-section-text">
+
+                                <h1>Let’s Build Our <span class="garen-bg">Dream</span> Together.</h1>
+
+
+                                <p class="mb-0">
+                                    Lorem ipsum dolor sit amet consectetur. Fusce a sagittis pharetra faucibus amet.
+                                    Ultricies proin donec metus amet. Eleifend morbi hendrerit pellentesque nibh. Dolor
+                                    diam vel augue odio netus habitasse
+                                    purus diam. Maecenas viverra elit penatibus at pulvinar in ipsum eu.
+                                </p>
+
+                            </div>
+                            <div class="mt-lg-5 mt-sm-4 mt-3 Account-button">
+
+                                <button><a href="">Create Account</a></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="top-img mt-5 mt-lg-0">
+
+                            <img src="./assest/img/Group 7165.png" alt="" class="w-100" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container-fluid">
+                <div class="News-title text-sm-center">
+
+                    <h1>How it <span class="garen-bg">works?</span></h1>
+
+                    <p class="mb-0 mt-2">Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+
+                </div>
+                <div class="myprogress mb-5">
+
+                    <div class="circle">
+                        <div class="works-img">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="mt-4">Create Account</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius. Neque nulla
+                            id bibendum non nunc varius.</p>
+                    </div>
+                    <span class="bar done"></span>
+                    <div class="circle">
+                        <div class="works-img">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="mt-4">Search</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius. Neque nulla
+                            id bibendum non nunc varius.</p>
+                    </div>
+                    <span class="bar half"></span>
+                    <div class="circle">
+                        <div class="works-img">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="mt-4">Submit Resume</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius. Neque nulla
+                            id bibendum non nunc varius.</p>
+                    </div>
+                    <span class="bar"></span>
+                    <div class="circle">
+                        <span class="title"></span>
+                        <div class="works-img">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="mt-4">Let Employers Find You</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius. Neque nulla
+                            id bibendum non nunc varius.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="container-fluid">
+                <div>
+                    <div class="row lign-items-center">
+                        <div class="col-lg-7 order-1 order-lg-0">
+                            <div class="main-img">
+                                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                    <img src="./assest/img/Group 7166.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div>
+                                <div class="employes-text">
+
+                                    <h1>Perfect for <span class="garen-bg">Candidates.</span> Beautiful for employes.
+                                    </h1>
+
+                                </div>
+                                <div class="mt-xl-5 mt-lg-4 mt-5">
+
+                                    <div class="row justify-content-around">
+                                        <div class="col-lg-6 col-sm-4 col-6">
+                                            <div>
+                                                <div class="position-relative">
+                                                    <div class="color-box"></div>
+                                                    <div class="Layer-img">
+                                                        <img src="./assest/img/Layer 22.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4 Profile-text">
+                                                    <h2>Profile Highlights</h2>
+                                                    <p>Get highlighted by the company that you’ve been worked</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-4 col-6">
+                                            <div>
+                                                <div class="position-relative">
+                                                    <div class="color-box"></div>
+                                                    <div class="Layer-img">
+                                                        <img src="./assest/img/briefcase.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="mt-4 Profile-text">
+                                                    <h2>Career Booster</h2>
+                                                    <p>Boost your career journey faster than before</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-xl-5 mt-4">
+
+                                        <div class="row justify-content-around">
+                                            <div class="col-lg-6 col-sm-4 col-6">
+                                                <div>
+                                                    <div class="position-relative">
+                                                        <div class="color-box"></div>
+                                                        <div class="Layer-img">
+                                                            <img src="./assest/img/Layer 22.png" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 Profile-text">
+                                                        <h2>Interactive assessment</h2>
+                                                        <p>work on the Interactive assessment given from company</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-4 col-6">
+                                                <div>
+                                                    <div class="position-relative">
+                                                        <div class="color-box"></div>
+                                                        <div class="Layer-img">
+                                                            <img src="./assest/img/Layer 22.png" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4 Profile-text">
+                                                        <h2>Featured Profile</h2>
+                                                        <p>Being featured makes your profile stands out from other</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container-fluid">
+                <div class="News-title text-sm-center">
+
+                    <h2>Most Demanding <span class="garen-bg">Categories</span></h2>
+
+                    <p class="mb-0 mt-2">Mauris ut cursus nunc. Morbi eleifend, ligula at consectetur vehicula</p>
+
+                </div>
+
+                <div class="Categories-section">
+
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Vector (3).png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Web & Software</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Vector (4).png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Education</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Vector (5).png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Customer</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Vector (5).png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Healthcare</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Group 7224.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Food Service</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Group 7226.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Sales & Marketing</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Group 7227.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Finance</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                    <div class="text-center Categories-box">
+                        <div class="d-flex justify-content-center">
+                            <div class="round-Categories">
+                                <img src="./assest/img/Group (3).png" alt="" />
+                            </div>
+                        </div>
+                        <div class="mt-3 text-Categories">
+                            <h3>Human Resource</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur. Neque nulla id bibendum non nunc varius.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container-fluid">
+                <div class="customer-from">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5">
+                            <div>
+                                <div class="Testimonials">
+                                    <div data-aos="fade-right">
+                                        <h3 class="garen-bg">Testimonials</h3>
+                                    </div>
+                                </div>
+                                <div class="Testimonials-text">
+                                    <div data-aos="fade-down-right">
+                                        <h1>
+                                            Quotes from our customer about us
+                                        </h1>
+                                    </div>
+                                    <div data-aos="fade-up-right">
+                                        <p>
+                                            You need to create an account to find the best and preferred job. lorem
+                                            Ipsum is simply dummy text of the printing and typesetting the standard
+                                            dummy text ever since the when an printer took. You
+                                            need to create an account to find the best and preferred job. lorem Ipsum is
+                                            simply dummy text of the printing and typesetting the standard
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="position-relative mt-5 mt-xl-0">
+                                <div class="d-flex justify-content-end">
+                                    <div class="swiper-box-bak"></div>
+                                </div>
+                                <div class="swiper customer">
+                                    <div class="swiper-wrapper customer-swiper">
+                                        <div class="swiper-slide">
+                                            <div class="d-flex align-items-center Designer-card">
+                                                <img src="./assest/img/Ellipse 63.png" alt="" class="boy-img" />
+                                                <div class="ms-sm-4 ms-2">
+                                                    <img src="./assest/img/“.png" class="fing-img" />
+                                                    <div class="mt-md-3 mt-2 Hawkins-text">
+                                                        <p>You need to create an account to find the best and preferred
+                                                            job. lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting the standard</p>
+                                                        <h2>Guy Hawkins</h2>
+                                                        <h6>Designer</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex align-items-center Designer-card">
+                                                <img src="./assest/img/Ellipse 63.png" alt="" class="boy-img" />
+                                                <div class="ms-sm-4 ms-2">
+                                                    <img src="./assest/img/“.png" class="fing-img" />
+                                                    <div class="mt-md-3 mt-2 Hawkins-text">
+                                                        <p>You need to create an account to find the best and preferred
+                                                            job. lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting the standard</p>
+                                                        <h2>Guy Hawkins</h2>
+                                                        <h6>Designer</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex align-items-center Designer-card">
+                                                <img src="./assest/img/Ellipse 63.png" alt="" class="boy-img" />
+                                                <div class="ms-sm-4 ms-2">
+                                                    <img src="./assest/img/“.png" class="fing-img" />
+                                                    <div class="mt-md-3 mt-2 Hawkins-text">
+                                                        <p>You need to create an account to find the best and preferred
+                                                            job. lorem Ipsum is simply dummy text of the printing and
+                                                            typesetting the standard</p>
+                                                        <h2>Guy Hawkins</h2>
+                                                        <h6>Designer</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next customer-swiper-next"></div>
+                                    <div class="swiper-button-prev customer-swiper-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="py-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <div class="text-center text-lg-start">
+                                <img src="./assest/img/log-in-web.png" alt="" class="footer-logo" />
+                            </div>
+                            <div class="mt-3 fotter-text text-center text-lg-start">
+                                <h6>You need to create an account to find the best and preferred job.</h6>
+                            </div>
+                            <div class="d-flex mt-lg-4 mt-sm-3 mt-2 justify-content-center justify-content-lg-start">
+                                <i class="fa-solid fa-location-dot garen-bg me-sm-3 me-2 fs-xl-4 fs-sm-5 fs-6"></i>
+                                <div class="fotter-text">
+                                    <h5>4517 Washington Ave. Manchester, Kentucky 39495</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-12 order-1 order-sm-0">
+                            <div class="d-flex justify-content-around mt-5 mt-lg-0">
+                                <div class="fotter-text">
+                                    <h2>Navigation <span></span></h2>
+
+                                    <p>Home</p>
+                                    <p>Find Jobs</p>
+                                    <p>Companies</p>
+                                    <p>Institutes</p>
+                                    <p>About us</p>
+                                    <p>Contact us</p>
+                                </div>
+                                <div class="fotter-text">
+                                    <h2>About <span></span></h2>
+
+                                    <p>Privacy Policy</p>
+                                    <p>Terms & Condition</p>
+                                    <p>Guide</p>
+                                    <p>Help Docs</p>
+                                    <p>Advice</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="mt-sm-5 mt-3 mt-lg-0">
+                                <div class="fotter-text">
+                                    <h2>Newsletter<span></span></h2>
+
+                                </div>
+                                <div class="Newsletter-text">
+                                    <h6>The latest job news, articles, sent to your inbox weekly</h6>
+                                </div>
+                                <div class="mt-md-5 mt-4 position-relative footer-Subscribe">
+                                    <input type="text" placeholder="Email Address" />
+                                    <button>Subscribe</button>
+                                </div>
+                                <div class="d-flex gap-lg-3 gap-2 mt-4 justify-content-center justify-content-lg-start">
+                                    <div class="footer-icone">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </div>
+                                    <div class="footer-icone">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </div>
+                                    <div class="footer-icone">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </div>
+                                    <div class="footer-icone">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </div>
+                                    <div class="footer-icone">
+                                        <i class="fa-brands fa-google"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--        <div>
+                <div class="d-flex align-items-center Designer-card">
+                    <img src="./assest/img/Ellipse 63.png" alt="" class="boy-img">
+                    <div class="ms-5">
+                        <img src="./assest/img/“.png" class="fing-img">
+                        <div class="mt-3 Hawkins-text">
+                            <p>You need to create an account to find the best and preferred job. lorem Ipsum is simply dummy text of the printing and typesetting the standard</p>
+                            <h2>Guy Hawkins</h2>
+                            <h6>Designer</h6>
+                        </div>
+                    </div>
+                </div>
+               </div>-->
+    </main>
+
+    <!--boostep-5 script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--jq script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        function darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            const isDarkMode = element.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#Login-btn").click(function () {
+                $("#Login").show();
+            });
+            $("#Login-btn").click(function () {
+                $("#Signup").hide();
+            });
+            $("#Signup-btn").click(function () {
+                $("#Signup").show();
+            });
+            $("#Signup-btn").click(function () {
+                $("#Login").hide();
+            });
+            $("#account-sing").click(function () {
+                $("#Signup").show();
+            });
+            $("#account-sing").click(function () {
+                $("#Login").hide();
+            });
+            $("#Already-login").click(function () {
+                $("#Login").show();
+            });
+            $("#Already-login").click(function () {
+                $("#Signup").hide();
+            });
+
+
+        });
+    </script>
+    <script>
+        let navLinks = document.querySelector(".nav-links");
+        let menuOpenBtn = document.querySelector(" .btn-menu");
+        let menuCloseBtn = document.querySelector(" .btn-closed");
+        menuOpenBtn.onclick = function () {
+            navLinks.style.left = "0";
+        };
+        menuCloseBtn.onclick = function () {
+            navLinks.style.left = "-100%";
+        };
+    </script>
+    <script>
+        var swiper = new Swiper(".customer ", {
+            slidesPerView: 2,
+
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                700: {
+                    slidesPerView: 2,
+
+                    direction: "vertical",
+                },
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            pagination: {
+                el: "",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                1750: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
